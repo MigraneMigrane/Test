@@ -1,0 +1,26 @@
+{{- if hasKey .Values "vpa" }}
+{{- $values := index .Values "vpa" -}}
+apiVersion: autoscaling.k8s.io/v1
+kind: VerticalPodAutoscaler
+metadata:
+  name: {{ include "hugo.fullname" . }}
+  labels:
+    {{- include "hugo.labels" . | nindent 4 }}
+    {{- if .Values.commonLabels }}
+    {{- include "hugo.tplvalues.render" (dict "value" .Values.commonLabels "context" $) | nindent 4 }}
+    {{- end }}
+  {{- if .Values.commonAnnotations }}
+  annotations: {{- include "hugo.tplvalues.render" ( dict "value" .Values.commonAnnotations "context" $ ) | nindent 4 }}
+  {{- end }}
+spec:
+  targetRef:
+    apiVersion: "apps/v1"
+    kind: Deployment
+    name: {{ include "hugo.fullname" . }}
+  updatePolicy:
+    updateMode: {{ $values.updateMode }}
+  {{- if hasKey $values "resourcePolicy" }}
+  resourcePolicy:
+    {{- toYaml $values.resourcePolicy | nindent 4 }}
+  {{- end }}
+{{- end}}

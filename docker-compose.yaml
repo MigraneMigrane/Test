@@ -1,0 +1,10 @@
+services:
+  hugo:
+    image: docker.io/hugomods/hugo:dart-sass-go-git-0.147.8
+    container_name: hugo
+    command: hugo server --bind=0.0.0.0
+    volumes:
+      - ./hugo:/src
+    ports:
+      - "1313:1313"
+    restart: unless-stopped

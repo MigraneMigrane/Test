@@ -1,0 +1,55 @@
+title: Trainer Docs
+defaultContentLanguage: ru
+baseURL: "http://localhost:1313/"
+theme: hextra
+# enableGitInfo: true
+
+params:
+  theme:
+    # light | dark | system
+    default: system
+    displayToggle: true
+  editURL:
+    enable: true
+    base: "https://github.com/deeplay-io/trainer-docs"
+  search:
+    enable: true
+    type: flexsearch
+    flexsearch:
+      # index page by: content | summary | heading | title
+      index: content
+      tokenize: forward
+    # excludeSearch: true < исключить страницы из поиска (для сокрытия по безопастности)
+  navbar:
+    displayTitle: true
+    displayLogo: true
+    logo:
+      path: logo-white.svg
+      dark: logo-black.svg
+      link: /
+  footer:
+      displayCopyright: false
+      displayPoweredBy: false
+      width: normal
+  # displayUpdatedDate: true
+  # dateFormat: "January 2, 2006"
+
+menu:
+  main:
+    - name: Search
+      weight: 1
+      params:
+        type: search
+    - name: GitHub
+      weight: 2
+      url: "https://github.com/deeplay-io/trainer-docs"
+      params:
+        icon: github
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+  highlight:
+    noClasses: false

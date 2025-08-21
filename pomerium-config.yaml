@@ -1,0 +1,37 @@
+# need subdomain here, or will be infinite redirect to https://localhost:8080/.pomerium
+# add to hosts.
+authenticate_service_url: https://auth.localhost:8080
+authorize_service_url: https://localhost:8080
+databroker_service_url: https://localhost:8080
+
+shared_secret: "mg02yOL/JsIJlDtWXFvWroY9N9WYUGXu+l10FWsHp84="
+cookie_secret: "sWhTLNwVGagWTnf5bZDxZxKMgMmtLnNElKsQmWQdtSE="
+
+idp_provider: "oidc"
+idp_provider_url: "https://your-IdP.com/application/o/hugo-test/"
+idp_client_id: "**"
+idp_client_secret: "**"
+idp_scopes: "openid,profile,email,groups"
+
+log_level: "info"
+
+routes:
+  # Проверка роутов идёт сверху вниз, поэтому более специфичные роуты должны быть выше.
+  # /about - only test-about group
+  - from: "https://localhost:8080"
+    to: "http://hugo:1313"
+    prefix: "/docs-pilot"
+    policy:
+      - allow:
+          or:
+            - claim/groups: docs-trainer-pilots
+    preserve_host_header: true
+
+  # Everything else - allow any authenticated user. Important! This section must be below others.
+  - from: "https://localhost:8080"
+    to: "http://hugo:1313"
+    prefix: "/"
+    allow_any_authenticated_user: true
+    preserve_host_header: true
+
+address: ":8080"

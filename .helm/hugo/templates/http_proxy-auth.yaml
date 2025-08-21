@@ -1,0 +1,52 @@
+{{- $values := index .Values "httpproxy" -}}
+{{- if $values.enabled }}
+apiVersion: projectcontour.io/v1
+kind: HTTPProxy
+metadata:
+  name: {{ include "hugo.fullname" . }}-auth
+  labels:
+    {{- include "hugo.labels" . | nindent 4 }}
+    {{- include "httpproxy.labels" . | nindent 4 }}
+    {{- if .Values.commonLabels }}
+    {{- include "hugo.tplvalues.render" (dict "value" .Values.commonLabels "context" $) | nindent 4 }}
+    {{- end }}
+spec:
+  ingressClassName: contour
+  virtualhost:
+    fqdn: auth.{{ $values.host }}
+    tls:
+      secretName: "tls-auth-{{ $values.host }}"
+  routes:
+    - conditions:
+        - prefix: /
+      enableWebsockets: true
+      services:
+        - name: {{ include "hugo.fullname" . }}
+          port: {{ .Values.service.promerium.port | int }}
+{{- end }}
+{{- if $values.cert }}
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: {{ include "hugo.fullname" . }}-auth
+  labels:
+    {{- include "hugo.labels" . | nindent 4 }}
+    {{- if .Values.commonLabels }}
+    {{- include "hugo.tplvalues.render" (dict "value" .Values.commonLabels "context" $) | nindent 4 }}
+    {{- end }}
+  {{- if .Values.commonAnnotations }}
+  annotations: {{- include "hugo.tplvalues.render" ( dict "value" .Values.commonAnnotations "context" $ ) | nindent 4 }}
+  {{- end }}
+spec:
+  commonName: "auth.{{ $values.host }}"
+  dnsNames:
+    - "auth.{{ $values.host  }}"
+  issuerRef:
+    kind: {{ ($values.issuer).kind | default "ClusterIssuer" }}
+    name: {{ ($values.issuer).name | default "letsencrypt-prod" }}
+  secretName: "tls-auth-{{ $values.host }}"
+  {{- if $values.secretTemplate }}
+  secretTemplate: {{ toYaml $values.secretTemplate | nindent 4 }}
+  {{- end }}
+{{- end }}

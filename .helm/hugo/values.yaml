@@ -1,0 +1,64 @@
+replicaCount: 1
+image:
+  pullPolicy: Always
+  docs:
+    repository: registry.deeplay.io/library/trainer/docs-hugo
+    tag: ""
+  promerium:
+    repository: pomerium/pomerium
+    tag: "0-29-0"
+
+httpproxy:
+  enabled: true
+  cert: true
+  annotations: {}
+  host: docs.trn.deeplay.io
+
+labels:
+  deploy: {}
+  httpproxy: {}
+  pod:
+    io.deeplay.loggia/format: ice-app
+
+vpa:
+  updateMode: "Auto"
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+
+podSecurityContext:
+  fsGroup: 101
+
+idp:
+  provider: oidc
+  url: "https://idp.bouncer.deeplay.io"
+  scopes: "openid,profile,email,groups"
+
+service:
+  promerium:
+    port: 8080
+  type: ClusterIP
+  port: 80
+
+resources:
+  requests:
+    cpu: 1m
+    memory: 10Mi
+  limits:
+    cpu: 5m
+    memory: 20Mi
+
+livenessProbe:
+  httpGet:
+    path: /ping
+    port: promerium
+readinessProbe:
+  httpGet:
+    path: /ping
+    port: promerium
+
+
+sharedSecret: ''
+cookieSecret: ''

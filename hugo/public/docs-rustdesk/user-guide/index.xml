@@ -1,0 +1,162 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Trainer Docs – Пользовательская документация</title>
+    <link>http://localhost:1313/docs-rustdesk/user-guide/</link>
+    <description>Recent content in Пользовательская документация on Trainer Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru</language>
+    
+	  <atom:link href="http://localhost:1313/docs-rustdesk/user-guide/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Клиент ЦУП</title>
+      <link>http://localhost:1313/docs-rustdesk/user-guide/client-cup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs-rustdesk/user-guide/client-cup/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;Основное окно&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;основное-окно&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%d0%be%d1%81%d0%bd%d0%be%d0%b2%d0%bd%d0%be%d0%b5-%d0%be%d0%ba%d0%bd%d0%be&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Основное окно после подключения представлят скриншот ниже, где&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Адресная книга - позволяет создавать &lt;em&gt;личные избранные&lt;/em&gt; имы которыми вы часто пользуетесь&lt;/li&gt;
+&lt;li&gt;Передача файлов ЦУП&amp;lt;&amp;gt;ИМ без подключения к видеопотоку&lt;/li&gt;
+&lt;li&gt;Настройка клиента ЦУПа + Выход из своего аккаунта&lt;/li&gt;
+&lt;li&gt;Обновить список подключений (например если добавили новые ИМы и вы не хотите перезапускать клиент)
+
+    &lt;img src=&#34;.././main_window.webp&#34; alt=&#34;main_window&#34;  loading=&#34;lazy&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-red-200 hx:bg-red-100 hx:text-red-900 hx:dark:border-red-200/30 hx:dark:bg-red-900/30 hx:dark:text-red-200&#34;&gt;
+  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Caution&lt;/p&gt;
+
+  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;Все подключения логгируются и сохраняются, если вы не выходите из своей учётной записи, то будет отображено что подключения совершались от вашего лица
+
+    &lt;img src=&#34;.././logout.webp&#34; alt=&#34;logout&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Окно подключения&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;окно-подключения&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%d0%be%d0%ba%d0%bd%d0%be-%d0%bf%d0%be%d0%b4%d0%ba%d0%bb%d1%8e%d1%87%d0%b5%d0%bd%d0%b8%d1%8f&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Обладает множестом параметров, но основные выделены на скриншотах
+
+    &lt;img src=&#34;.././connection_window_1.webp&#34; alt=&#34;connection_window_1&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;
+    &lt;img src=&#34;.././connection_window_2.webp&#34; alt=&#34;connection_window_2&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Качество изображения - выбирать на своё усмотрение&lt;/li&gt;
+&lt;li&gt;Кодек - по умолчанию vp9, при проблемах выбирать h264 или h265&lt;/li&gt;
+&lt;li&gt;Разрешение - наименьшее удобное для работы&lt;/li&gt;
+&lt;li&gt;Виртуальный дисплей - не использовать&lt;/li&gt;
+&lt;li&gt;Режим конфиденциальности - не использовать (делает физический экран тёмным у ИМа)&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Клиент ИМ</title>
+      <link>http://localhost:1313/docs-rustdesk/user-guide/client-im/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs-rustdesk/user-guide/client-im/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;Основное окно&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;основное-окно&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%d0%be%d1%81%d0%bd%d0%be%d0%b2%d0%bd%d0%be%d0%b5-%d0%be%d0%ba%d0%bd%d0%be&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Предстаяет из себя небольшое окно с &lt;code&gt;id&lt;/code&gt; устройства, так же можно найти в трее иконку. Нажатие на скрытие/закрытие окна сворачивает программу в трей&lt;/p&gt;
+&lt;p&gt;
+    &lt;img src=&#34;.././client_im.webp&#34; alt=&#34;client_im&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Веб-консоль администратора</title>
+      <link>http://localhost:1313/docs-rustdesk/user-guide/web-console/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs-rustdesk/user-guide/web-console/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;Devices / Устройства&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;devices--устройства&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#devices--%d1%83%d1%81%d1%82%d1%80%d0%be%d0%b9%d1%81%d1%82%d0%b2%d0%b0&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Позволяет увидеть информацию о ИМах подключённых к rustdesk и их статус. После установки &lt;code&gt;client-im&lt;/code&gt; на им, следует назначить устройству соответствующую группу устройств, и переименовать в человекоудобное имя.
+
+    &lt;img src=&#34;.././devices.webp&#34; alt=&#34;devices&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-indigo-200 hx:bg-indigo-100 hx:text-indigo-900 hx:dark:border-indigo-200/30 hx:dark:bg-indigo-900/30 hx:dark:text-indigo-200&#34;&gt;
+  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Important&lt;/p&gt;
+
+  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;Удалить устройство можно только после удаления &lt;code&gt;client-im&lt;/code&gt; с има (удаление сервиса), отключения в веб-консоли устройства, далее появится кнопка удалить&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Logs / Аудит Безопасности&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;logs--аудит-безопасности&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#logs--%d0%b0%d1%83%d0%b4%d0%b8%d1%82-%d0%b1%d0%b5%d0%b7%d0%be%d0%bf%d0%b0%d1%81%d0%bd%d0%be%d1%81%d1%82%d0%b8&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;В данном разделе можно увидеть&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Список подключений / попыток подключений, время старта/завершения сессии&lt;/li&gt;
+&lt;li&gt;Список переданных файлов&lt;/li&gt;
+&lt;li&gt;Множественные неудачные попытки подключений&lt;/li&gt;
+&lt;li&gt;Действия администраторов в Веб-консоли&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Users / Пользователи&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;users--пользователи&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#users--%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d1%82%d0%b5%d0%bb%d0%b8&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Список пользователей которые залогинилсь через Bouncer. Пользователь не появится автоматически при добавлении в группу баунсера, ему нужно залогинится внутри rustdesk, через клиент-цуп или веб страницу. После логина пользователя нужно добавить в группу внутри rustdesk, тогда у него появится возможность подлючаться к ИМам.
+
+    &lt;img src=&#34;.././user.webp&#34; alt=&#34;user&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h2&gt;Groups / Группы&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;groups--группы&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#groups--%d0%b3%d1%80%d1%83%d0%bf%d0%bf%d1%8b&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Состоит из 2 разделов&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Группа пользователей&lt;/li&gt;
+&lt;li&gt;Группа устройств&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;User Groups / Группа пользователей&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;user-groups--группа-пользователей&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#user-groups--%d0%b3%d1%80%d1%83%d0%bf%d0%bf%d0%b0-%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d1%82%d0%b5%d0%bb%d0%b5%d0%b9&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Состоит из пользователей, пользователь может состоять только в 1 группе. Соединия между группами позволяют указывать межсвязи. На скриншоте ниже пример, что группа &lt;code&gt;Admins&lt;/code&gt; может подключаться ко всем группам, группа &lt;code&gt;qa-manual-team&lt;/code&gt; может подключаться к группе &lt;code&gt;qa-sibc-team&lt;/code&gt;, группа &lt;code&gt;qa-sibc-team&lt;/code&gt; может подключаться только к своим устройствам.
+
+    &lt;img src=&#34;.././user_groups.webp&#34; alt=&#34;user_groups&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h3&gt;Device Groups / Группы устройств&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;device-groups--группы-устройств&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#device-groups--%d0%b3%d1%80%d1%83%d0%bf%d0%bf%d1%8b-%d1%83%d1%81%d1%82%d1%80%d0%be%d0%b9%d1%81%d1%82%d0%b2&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Состоит из устройств и позволяет назначать группы пользователей или разрешать конкретным пользователям подключения. После установки &lt;code&gt;client-im&lt;/code&gt; нужно назначить устройство на группу устройств. По умолчанию назначается группа &lt;code&gt;Default&lt;/code&gt; к которой есть доступ только у администраторов
+
+    &lt;img src=&#34;.././device_groups_1.webp&#34; alt=&#34;device_groups_1&#34;  loading=&#34;lazy&#34; /&gt;
+
+    &lt;img src=&#34;.././device_groups_2.webp&#34; alt=&#34;device_groups_2&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h3&gt;Address Books / Адресная книга&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;address-books--адресная-книга&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#address-books--%d0%b0%d0%b4%d1%80%d0%b5%d1%81%d0%bd%d0%b0%d1%8f-%d0%ba%d0%bd%d0%b8%d0%b3%d0%b0&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Позволяет создавать не стандартные адресные книги (с тэгами) и делиться ими между группами. Необходимость этого функционала сомнительна, но может стать полезна.&lt;/p&gt;
+&lt;h2&gt;Остальное&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;остальное&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%d0%be%d1%81%d1%82%d0%b0%d0%bb%d1%8c%d0%bd%d0%be%d0%b5&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Не редактировать, не копировать, не трогать! Подробнее в технической документации&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Добавление в Bouncer</title>
+      <link>http://localhost:1313/docs-rustdesk/user-guide/bouncer-add/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs-rustdesk/user-guide/bouncer-add/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Bouncer управляет тем, кто может логинится в rustdesk. Нужно перейти по ссылке и найти группу &lt;code&gt;rustdesk-users&lt;/code&gt; &amp;gt; Изменить &amp;gt; + Условие &amp;gt; Ввести почту сотрудника &amp;gt; Удостовериться что на иконке 1 человек &amp;gt; Сохранить.&lt;/p&gt;
+&lt;a
+  class=&#34;hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-transparent hx:shadow-xs hx:dark:border-neutral-800 hx:hover:bg-slate-50 hx:hover:shadow-md hx:dark:hover:border-neutral-700 hx:dark:hover:bg-neutral-900&#34;href=&#34;https://bouncer.deeplay.io/dynamic-groups/&#34;
+    target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;&lt;span class=&#34;hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:p-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 256 256&#34;&gt;&lt;path fill=&#34;currentColor&#34; d=&#34;M237.66 66.34a8 8 0 0 0-11.32 0L192 100.69L155.31 64l34.35-34.34a8 8 0 1 0-11.32-11.32L144 52.69l-26.34-26.35a8 8 0 0 0-11.32 11.32l6.35 6.34l-53 53a40 40 0 0 0 0 56.57l15.71 15.71l-49.06 49.06a8 8 0 0 0 11.32 11.32l49.09-49.09l15.71 15.71a40 40 0 0 0 56.57 0l53-53l6.34 6.35a8 8 0 0 0 11.32-11.32L203.31 112l34.35-34.34a8 8 0 0 0 0-11.32ZM147.72 185a24 24 0 0 1-33.95 0L71 142.23a24 24 0 0 1 0-33.95l53-53L200.69 132Z&#34;/&gt;&lt;/svg&gt;Bouncer Dynamic Groups&lt;/span&gt;&lt;/a&gt;
+&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-indigo-200 hx:bg-indigo-100 hx:text-indigo-900 hx:dark:border-indigo-200/30 hx:dark:bg-indigo-900/30 hx:dark:text-indigo-200&#34;&gt;
+  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Important&lt;/p&gt;
+
+  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;Удаление юзера из группы bouncer не удаляет пользователя из rustdesk, но больше не позволит ему залогиниться&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+    &lt;img src=&#34;.././bouncer_add_user.webp&#34; alt=&#34;bouncer_add_user&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

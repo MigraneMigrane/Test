@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "hugo.fullname" . }}
+  labels:
+    {{- include "hugo.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+    - port: {{ .Values.service.promerium.port }}
+      targetPort: promerium
+      protocol: TCP
+      name: promerium
+  selector:
+    {{- include "hugo.selectorLabels" . | nindent 4 }}

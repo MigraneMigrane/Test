@@ -1,0 +1,18 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Trainer Docs – Rustdesk</title>
+    <link>http://localhost:1313/docs-rustdesk/</link>
+    <description>Recent content in Rustdesk on Trainer Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru</language>
+    
+	  <atom:link href="http://localhost:1313/docs-rustdesk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

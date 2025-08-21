@@ -1,0 +1,22 @@
+services:
+  hugo:
+    image: docker.io/hugomods/hugo:dart-sass-go-git-0.147.8
+    container_name: hugo
+    command: hugo server --bind=0.0.0.0
+    volumes:
+      - ./hugo:/src
+    expose:
+      - "1313"
+    restart: unless-stopped
+
+  pomerium:
+    image: pomerium/pomerium:0-29-0
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./pomerium-config.yaml:/pomerium/config.yaml:ro
+    environment:
+      - POMERIUM_CONFIG_FILE=/pomerium/config.yaml
+    depends_on:
+      - hugo
+    restart: unless-stopped

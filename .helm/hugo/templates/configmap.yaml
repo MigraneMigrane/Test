@@ -1,0 +1,36 @@
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: promerium-config
+  labels:
+    {{- include "hugo.labels" . | nindent 4 }}
+    {{- if .Values.commonLabels }}
+    {{- include "hugo.tplvalues.render" (dict "value" .Values.commonLabels "context" $) | nindent 4 }}
+    {{- end }}
+data:
+  config.yaml: |
+    routes:
+      - from: "https://{{ .Values.httpproxy.host }}"
+        to: "http://{{ include "hugo.fullname" . }}:80"
+        prefix: "/docs-trn-infra"
+        policy:
+          - allow:
+              or:
+                - claim/groups: trainer-infra-team
+        preserve_host_header: true
+        
+      - from: "https://{{ .Values.httpproxy.host }}"
+        to: "http://{{ include "hugo.fullname" . }}:80"
+        prefix: "/docs-pilot"
+        policy:
+          - allow:
+              or:
+                - claim/groups: docs-trainer-pilots
+        preserve_host_header: true
+
+      - from: "https://{{ .Values.httpproxy.host }}"
+        to: "http://{{ include "hugo.fullname" . }}:80"
+        prefix: "/"
+        allow_any_authenticated_user: true
+        preserve_host_header: true

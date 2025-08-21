@@ -1,0 +1,407 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Trainer Docs – Техническая документация</title>
+    <link>http://localhost:1313/docs-rustdesk/tech-guide/</link>
+    <description>Recent content in Техническая документация on Trainer Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru</language>
+    
+	  <atom:link href="http://localhost:1313/docs-rustdesk/tech-guide/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Веб-консоль администратора extra</title>
+      <link>http://localhost:1313/docs-rustdesk/tech-guide/web-console-extra/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs-rustdesk/tech-guide/web-console-extra/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Основные разделы описаны в пользовательской документации
+&lt;a
+  class=&#34;hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-transparent hx:shadow-xs hx:dark:border-neutral-800 hx:hover:bg-slate-50 hx:hover:shadow-md hx:dark:hover:border-neutral-700 hx:dark:hover:bg-neutral-900&#34;href=&#34;../../user-guide/web-console/&#34;
+    &gt;&lt;span class=&#34;hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:p-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z&#34;/&gt;&lt;/svg&gt;Web-Console&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-indigo-200 hx:bg-indigo-100 hx:text-indigo-900 hx:dark:border-indigo-200/30 hx:dark:bg-indigo-900/30 hx:dark:text-indigo-200&#34;&gt;
+  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Important&lt;/p&gt;
+
+  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;Разделы ниже разрешено изменять только команде TRN.Infra&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Стратегии / Strategies&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;стратегии--strategies&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%d1%81%d1%82%d1%80%d0%b0%d1%82%d0%b5%d0%b3%d0%b8%d0%b8--strategies&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Стратегии позволяют изменять удалённо некоторые параметры. В текущей стандартной стратегии применено отключение всплывающего окна при подключении пользователя к устройству в правом верхнем углу &lt;code&gt;Hide connection management window&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Существует четыре типа настроек:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Настройки переопределения в веб-консоли → Пользовательские клиенты&lt;/li&gt;
+&lt;li&gt;Настройки по умолчанию — в веб-консоли → Пользовательские клиенты&lt;/li&gt;
+&lt;li&gt;Пользовательские настройки — в клиенте RustDesk&lt;/li&gt;
+&lt;li&gt;Настройки стратегии — в веб-консоли → Стратегии&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Иерархия приоритетов этих настроек следующая:
+Переопределение &amp;gt; Стратегия &amp;gt; Пользователь &amp;gt; По умолчанию.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://rustdesk.com/docs/en/self-host/rustdesk-server-pro/strategy/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Документация&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Пользовательские клиенты / Custom clients&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;пользовательские-клиенты--custom-clients&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d1%82%d0%b5%d0%bb%d1%8c%d1%81%d0%ba%d0%b8%d0%b5-%d0%ba%d0%bb%d0%b8%d0%b5%d0%bd%d1%82%d1%8b--custom-clients&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Страница для генерации различных клиентов rustdesk и хардкодить параметры внутрь них. Внутрь клиент-им и клиент-цуп зашиваются параметры описанные на основной странице, включая пароль, но даже зная пароль прямое подключение минуя аутентификацию bouncer выключено. Собранный клиент доступен для скачивания 5 дней, после требуется перезапустить сборку. Сборка происходит на серверах rustdesk предположительно на гитхаб экшенах, а так же подписывается валидной подписью от самого rustdesk. Обилие параметров для кастомизации доступно на оф.сайте&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://rustdesk.com/docs/en/self-host/client-configuration/advanced-settings/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Документация&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Настройки / Settings&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;настройки--settings&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%d0%bd%d0%b0%d1%81%d1%82%d1%80%d0%be%d0%b9%d0%ba%d0%b8--settings&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Про данные настройки лучше почитать официальную документацию.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Сетевая архитектура</title>
+      <link>http://localhost:1313/docs-rustdesk/tech-guide/network-arch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs-rustdesk/tech-guide/network-arch/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Общая схема взаимодействия представлена ниже. Локации/IP выбраны не такие какие есть по факту, но общая суть такая.&lt;/p&gt;
+&lt;p&gt;
+    &lt;img src=&#34;.././connect_p2p.gif&#34; alt=&#34;connect_p2p&#34;  loading=&#34;lazy&#34; /&gt;
+
+    &lt;img src=&#34;.././connect_relay.gif&#34; alt=&#34;connect_relay&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>HBBS и HBBR</title>
+      <link>http://localhost:1313/docs-rustdesk/tech-guide/hbbs-hbbr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs-rustdesk/tech-guide/hbbs-hbbr/</guid>
+      <description>
+        
+        
+        &lt;p&gt;HBBS (Signaling) - Компонент содержащий всю логику работы и дб&lt;br&gt;
+HBBR (Relay) - Компонент регистрирующийся в hbbs (инициализация подключения идёт от hbbs) и выполняющий функцию пропускания трафика через себя при не установлении прямого подключения к ИМу.&lt;/p&gt;
+&lt;h2&gt;HBBS Deploy&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;hbbs-deploy&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#hbbs-deploy&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div class=&#34;filename not-prose&#34; dir=&#34;auto&#34;&gt;docker-compose.yaml&lt;/div&gt;&lt;div&gt;&lt;pre&gt;&lt;code&gt;services:
+  nginx:
+    image: nginx:alpine
+    container_name: hbbs-nginx
+    ports:
+      - &amp;#39;443:443&amp;#39;      # HTTPS for web console
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx_ssl:/etc/nginx/ssl:ro
+      - ./nginx_logs:/var/log/nginx
+    restart: unless-stopped
+    networks:
+      - rustdesk-net
+    sysctls:
+      - net.ipv4.ip_forward=1
+      - net.ipv4.conf.all.route_localnet=1
+    extra_hosts:
+      - &amp;#34;host.docker.internal:host-gateway&amp;#34;
+
+  hbbs:
+    image: docker.io/rustdesk/rustdesk-server-pro:1.6.2
+    container_name: hbbs
+    hostname: hbbs-msk2
+    command: hbbs
+    volumes:
+      - ./hbbs_data:/root
+    environment:
+      # https://github.com/rustdesk/rustdesk-server/tree/master?tab=readme-ov-file#env-variables
+      # IP address/DNS name of the machines running hbbr (separated by comma)
+      - &amp;#34;RELAY=rustrelay-spb2-1.netsrv.pw&amp;#34;
+      - &amp;#34;ENCRYPTED_ONLY=1&amp;#34;
+      - &amp;#34;RUST_LOG=INFO&amp;#34;
+    network_mode: host
+    # ports:
+    #   - &amp;#39;21114:21114/tcp&amp;#39; # HTTPS for web console
+    #   - &amp;#39;21115:21115/tcp&amp;#39; # RustDesk NAT test
+    #   - &amp;#39;21116:21116/tcp&amp;#39; # RustDesk hole punching (TCP)
+    #   - &amp;#39;21116:21116/udp&amp;#39; # RustDesk registration and heartbeat service (UDP)
+    #   - &amp;#39;21118:21118/tcp&amp;#39; # RustDesk web clients.
+    restart: unless-stopped
+
+networks:
+  rustdesk-net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.21.0.0/16&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-8&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Скопировать код&#34;
+  &gt;
+    &lt;div class=&#34;copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div class=&#34;filename not-prose&#34; dir=&#34;auto&#34;&gt;nginx.conf&lt;/div&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-nginx&#34; data-lang=&#34;nginx&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;events&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kn&#34;&gt;worker_connections&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1024&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;http&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kn&#34;&gt;include&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;/etc/nginx/mime.types&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kn&#34;&gt;default_type&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;application/octet-stream&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kn&#34;&gt;sendfile&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kn&#34;&gt;keepalive_timeout&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;65&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;# Existing configuration for rustdesk.netsrv.pw
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;kn&#34;&gt;server&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kn&#34;&gt;listen&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;80&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kn&#34;&gt;server_name&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;rustdesk.netsrv.pw&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kn&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;301&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;https://&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$host$request_uri&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kn&#34;&gt;server&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kn&#34;&gt;listen&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;443&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;ssl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kn&#34;&gt;http2&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kn&#34;&gt;server_name&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;rustdesk.netsrv.pw&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;# SSL Configuration
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;kn&#34;&gt;ssl_certificate&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;/etc/nginx/ssl/cert.pem&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kn&#34;&gt;ssl_certificate_key&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;/etc/nginx/ssl/private.key&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;# SSL Security Settings
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;kn&#34;&gt;ssl_protocols&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;TLSv1.2&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;TLSv1.3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kn&#34;&gt;ssl_ciphers&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kn&#34;&gt;ssl_prefer_server_ciphers&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;off&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kn&#34;&gt;ssl_session_cache&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;shared:SSL:10m&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kn&#34;&gt;ssl_session_timeout&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10m&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kn&#34;&gt;set_real_ip_from&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;172.16.0.0&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;/12&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kn&#34;&gt;set_real_ip_from&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;10.0.0.0&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;/8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kn&#34;&gt;set_real_ip_from&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;192.168.0.0&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;/16&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kn&#34;&gt;real_ip_header&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;X-Forwarded-For&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kn&#34;&gt;real_ip_recursive&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;# Proxy to RustDesk web console
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;kn&#34;&gt;location&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;kn&#34;&gt;proxy_pass&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;http://host.docker.internal:21114&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;kn&#34;&gt;proxy_set_header&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;Host&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$host&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;kn&#34;&gt;proxy_set_header&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;X-Real-IP&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$remote_addr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;kn&#34;&gt;proxy_set_header&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;X-Forwarded-For&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$proxy_add_x_forwarded_for&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;kn&#34;&gt;proxy_set_header&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;X-Forwarded-Proto&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$scheme&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;kn&#34;&gt;proxy_set_header&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;X-Forwarded-Host&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$host&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;kn&#34;&gt;proxy_set_header&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;X-Forwarded-Port&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$server_port&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;c1&#34;&gt;# Timeouts
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;            &lt;span class=&#34;kn&#34;&gt;proxy_connect_timeout&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;60s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;kn&#34;&gt;proxy_send_timeout&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;60s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;kn&#34;&gt;proxy_read_timeout&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;60s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;# Proxy for WebSocket connection
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;kn&#34;&gt;location&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;/ws/id&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;kn&#34;&gt;proxy_pass&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;http://host.docker.internal:21118&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;kn&#34;&gt;proxy_http_version&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;.1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;kn&#34;&gt;proxy_set_header&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;Upgrade&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$http_upgrade&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;kn&#34;&gt;proxy_set_header&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;Connection&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Upgrade&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;kn&#34;&gt;proxy_set_header&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;Host&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$host&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;kn&#34;&gt;proxy_set_header&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;X-Real-IP&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$remote_addr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;kn&#34;&gt;proxy_set_header&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;X-Forwarded-For&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$proxy_add_x_forwarded_for&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;kn&#34;&gt;proxy_set_header&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;X-Forwarded-Proto&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$scheme&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;kn&#34;&gt;proxy_read_timeout&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;120s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kn&#34;&gt;access_log&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;/var/log/nginx/rustdesk_access.log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kn&#34;&gt;error_log&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;/var/log/nginx/rustdesk_error.log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-8&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Скопировать код&#34;
+  &gt;
+    &lt;div class=&#34;copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Директория &lt;code&gt;hbbs_data&lt;/code&gt; содержит в себе&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;db.sqlite3, db.sqlite3-shm, db.sqlite3-wal — это файлы базы данных. Ваши аккаунты (включая пароли), логи и настройки хранятся в базе данных.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;id_ed25519 — приватный ключ. Этот файл важен, он используется на сервере RustDesk, без этого ключа невозможно восстановить публичный ключ. Ключ, который вы указываете на клиенте RustDesk (файл id_ed25519.pub), является публичным ключом. Вы также можете вручную задать приватный ключ (содержимое файла id_ed25519) через веб-консоль.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;oidc_config.toml - конфигурация клиента oidc.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Лицензия&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;лицензия&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%d0%bb%d0%b8%d1%86%d0%b5%d0%bd%d0%b7%d0%b8%d1%8f&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Проверка лицензии происходит при старте контейнера. Для её работы требуется &lt;code&gt;network_mode: host&lt;/code&gt; либо спуфинг mac адреса контейнера (требуется docker-compose &amp;gt;v2)&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;    networks:
+      rustdesk-net:
+        #license check bypass
+        mac_address: a0:62:2f:7a:bc:1d&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Скопировать код&#34;
+  &gt;
+    &lt;div class=&#34;copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;a href=&#34;https://rustdesk.com/docs/en/self-host/rustdesk-server-pro/installscript/docker/#docker-commands&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Генерация мак адреса&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;macaddrhbbs=$(echo -n A0-62-2F; dd bs=1 count=3 if=/dev/random 2&amp;gt;/dev/null |hexdump -v -e &amp;#39;/1 &amp;#34;-%02X&amp;#34;&amp;#39;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Скопировать код&#34;
+  &gt;
+    &lt;div class=&#34;copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;HBBR Deploy&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;hbbr-deploy&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#hbbr-deploy&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Нужно подложить приватный и публичный ключ в &lt;code&gt;./hbbr_data&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;services:
+  hbbr:
+    image: docker.io/rustdesk/rustdesk-server-pro:1.6.2
+    container_name: hbbr
+    command: hbbr
+    volumes:
+      - ./hbbr_data:/root
+    environment:
+      # https://github.com/rustdesk/rustdesk-server/tree/master?tab=readme-ov-file#env-variables
+      - &amp;#34;RUST_LOG=DEBUG&amp;#34;
+    network_mode: host
+    cap_add:
+      - NET_ADMIN
+    restart: unless-stopped
+
+networks:
+  rustdesk-net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.21.0.0/16&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Скопировать код&#34;
+  &gt;
+    &lt;div class=&#34;copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Подробная настройка описана в &lt;a href=&#34;https://rustdesk.com/docs/en/self-host/rustdesk-server-pro/relay/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Документации&lt;/a&gt;, там же описание настройки GeoLocation для выбора ближайшего hbbr к клиенту-цупу (если не включён vpn)&lt;/p&gt;
+&lt;h2&gt;ENV variables&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;env-variables&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#env-variables&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;variable&lt;/th&gt;
+          &lt;th&gt;binary&lt;/th&gt;
+          &lt;th&gt;description&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;ALWAYS_USE_RELAY&lt;/td&gt;
+          &lt;td&gt;hbbs&lt;/td&gt;
+          &lt;td&gt;if set to &lt;strong&gt;&amp;ldquo;Y&amp;rdquo;&lt;/strong&gt; disallows direct peer connection&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;DB_URL&lt;/td&gt;
+          &lt;td&gt;hbbs&lt;/td&gt;
+          &lt;td&gt;path for database file&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;DOWNGRADE_START_CHECK&lt;/td&gt;
+          &lt;td&gt;hbbr&lt;/td&gt;
+          &lt;td&gt;delay (in seconds) before downgrade check&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;DOWNGRADE_THRESHOLD&lt;/td&gt;
+          &lt;td&gt;hbbr&lt;/td&gt;
+          &lt;td&gt;threshold of downgrade check (bit/ms)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;KEY&lt;/td&gt;
+          &lt;td&gt;hbbs/hbbr&lt;/td&gt;
+          &lt;td&gt;if set force the use of a specific key, if set to &lt;strong&gt;&amp;quot;_&amp;quot;&lt;/strong&gt; force the use of any key&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;LIMIT_SPEED&lt;/td&gt;
+          &lt;td&gt;hbbr&lt;/td&gt;
+          &lt;td&gt;speed limit (in Mb/s)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;PORT&lt;/td&gt;
+          &lt;td&gt;hbbs/hbbr&lt;/td&gt;
+          &lt;td&gt;listening port (21116 for hbbs - 21117 for hbbr)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;RELAY&lt;/td&gt;
+          &lt;td&gt;hbbs&lt;/td&gt;
+          &lt;td&gt;IP address/DNS name of the machines running hbbr (separated by comma)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;RUST_LOG&lt;/td&gt;
+          &lt;td&gt;all&lt;/td&gt;
+          &lt;td&gt;set debug level (error|warn|info|debug|trace)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;SINGLE_BANDWIDTH&lt;/td&gt;
+          &lt;td&gt;hbbr&lt;/td&gt;
+          &lt;td&gt;max bandwidth for a single connection (in Mb/s)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;TOTAL_BANDWIDTH&lt;/td&gt;
+          &lt;td&gt;hbbr&lt;/td&gt;
+          &lt;td&gt;max total bandwidth (in Mb/s)&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Поиск неисправностей</title>
+      <link>http://localhost:1313/docs-rustdesk/tech-guide/troubleshooting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs-rustdesk/tech-guide/troubleshooting/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;При подключении нового устройства, нужно обратить внимание как с него резолвится IP адрес hbbs и hbbr сервера, он должен быть серым (проверить это можно либо просто пингом, либо в веб-консоли), иначе p2p коннект не будет срабатывать у пользователей с включённым vpn.&lt;/li&gt;
+&lt;li&gt;Если кнопка &lt;code&gt;Continue on Bouncer sso&lt;/code&gt; не отображается, значит с утройства не доступен rustdesk.netsrv.pw (443/21114), на тестовой в браузере было доступно, а в клиенте нет, помогло отключение браунмауэра&lt;/li&gt;
+&lt;li&gt;Если изображение зависает при любом подключении возможно ПК не поддерживает кодек vp9 или иной, надо перебирать, после в настройках клиента изменить дефолтное vp9 значение на другое работающее&lt;/li&gt;
+&lt;li&gt;Порты для взаимодействия с серверной частью описаны в &lt;a href=&#34;https://rustdesk.com/docs/en/self-host/rustdesk-server-oss/docker/#requirements&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Документации&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Существуют проблемы подключения используя протоколы shadowsocks/vless/trojan и прочих.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200&#34;&gt;
+  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Note&lt;/p&gt;
+
+  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;В текущей реализации rustdesk нет поддержки SCIM - это означает что пользователи удалённые из баунсера останутся занимать слоты лицензии внутри rustdesk.&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
